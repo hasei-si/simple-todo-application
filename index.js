@@ -52,9 +52,8 @@ function onUpdateIsDone(task) {
             task.isDone = currentValue;
     }
 
-    return task;
+        return task;
 }
-
 /**
  * [学生3]
  * 「タスクのタイトル」をクリックしたときに、
@@ -74,7 +73,7 @@ function onTaskTitleClicked(task) {
 
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
     const currentValue = task.isDone;
-    task.isDone = currentValue;
+    task.isDone = !currentValue;
 
     return task;
 }
